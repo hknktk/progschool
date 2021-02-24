@@ -47,7 +47,7 @@ header .background {
 
 header .background h1 {
   position: absolute;
-  left: 2%;
+  left: 5%;
   top: 10%;
   font-size: 60px;
   color: #32b4ff;
@@ -78,10 +78,10 @@ header .background h2 {
   top: 30px;
   right: 10px;
   display: block;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #32b4ff;
   -webkit-transition: 0.9s;
   transition: 0.9s;
   z-index: 4;
@@ -94,7 +94,6 @@ header .background h2 {
 #menuButton.active div:nth-of-type(1) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: #fff;
 }
 
 #menuButton.active div:nth-of-type(2) {
@@ -106,7 +105,6 @@ header .background h2 {
 #menuButton.active div:nth-of-type(3) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  background-color: #fff;
 }
 
 #menuButton div {
@@ -116,14 +114,14 @@ header .background h2 {
   display: block;
   width: 50%;
   height: 2px;
-  background-color: #333;
+  background-color: #fff;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 #menuButton div:nth-of-type(1) {
-  -webkit-transform: translateY(-15px);
-          transform: translateY(-15px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 #menuButton div:nth-of-type(2) {
@@ -132,15 +130,15 @@ header .background h2 {
 }
 
 #menuButton div:nth-of-type(3) {
-  -webkit-transform: translateY(15px);
-          transform: translateY(15px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 #slide {
   position: fixed;
   top: 0;
   right: 0;
-  width: 70%;
+  width: 85%;
   height: 100vh;
   background-color: #32b4ff;
   z-index: 3;
@@ -180,7 +178,7 @@ header .background h2 {
 
 #slide #slideList li a {
   padding: 20px;
-  font-size: 30px;
+  font-size: 25px;
   color: #fff;
   line-height: 1.5;
 }
@@ -189,28 +187,104 @@ header .background h2 {
   background-color: #fefefe;
 }
 
-.container h2 {
+.container .block h2 {
   text-align: center;
   margin: 30px auto;
-  padding: 2px;
   font-size: 30px;
-}
-
-.container h2 span {
   color: #32b4ff;
-  border-bottom: 1px solid #ff1c1c;
-  font-style: italic;
+  line-height: 2;
 }
 
-.container .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.container .block h2::before {
+  content: "/";
+  color: #ff1c1c;
+  padding: 0 5px;
+}
+
+.container .block h2 span {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.container .block .box {
   position: relative;
   width: 90%;
   min-height: 30vh;
-  margin: 20px auto 0;
+  margin: 10px auto 100px;
+}
+
+.container .block .box .photo1 {
+  width: 100%;
+  min-height: 30vh;
   background: url(./img/img1.png) center center no-repeat;
   background-size: cover;
+  margin: 20px auto 0;
+}
+
+.container .block .box .photo2 {
+  width: 100%;
+  min-height: 30vh;
+  background: url(./img/img2.png) center center no-repeat;
+  background-size: cover;
+  margin: 10px auto 0;
+}
+
+.container .block .box .photo3 {
+  width: 100%;
+  min-height: 30vh;
+  background: url(./img/img3.png) center center no-repeat;
+  background-size: cover;
+  margin: 10px auto 0;
+}
+
+.container .block .box .photo4 {
+  width: 100%;
+  min-height: 30vh;
+  background: url(./img/img4.png) center center no-repeat;
+  background-size: cover;
+  margin: 10px auto 0;
+}
+
+.container .block .box h3 {
+  margin: 20px auto 0px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #32b4ff;
+}
+
+.container .block .box h3.first::before {
+  content: "1.";
+  color: #ff1c1c;
+  font-size: 30px;
+}
+
+.container .block .box h3.second::before {
+  content: "2.";
+  color: #ff1c1c;
+  font-size: 30px;
+}
+
+.container .block .box h3.third::before {
+  content: "3.";
+  color: #ff1c1c;
+  font-size: 30px;
+}
+
+.container .block .box h3.forth::before {
+  content: "4.";
+  color: #ff1c1c;
+  font-size: 30px;
+}
+
+.container .block .box p {
+  width: 95%;
+  font-size: 16px;
+  margin: 3px auto;
+  padding: 20px;
+  font-family: serif;
+  line-height: 1.5;
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */
