@@ -23,7 +23,7 @@
       <div id="mask" class="mask"></div>
       
       <!-- ファーストビュー -->
-      <div class="background">
+      <div class="background" id="background">
         <h1>Code Expand</h1>
         <h2>”学び”が<br>あなたの可能性を広げる！</h2>
       </div>
@@ -85,7 +85,7 @@
           <h3 class="js-sub first">あなただけのカリキュラムを作成</h3>
           <p class="js-text">受講開始前に生徒1人1人の現状レベルと目標レベルを知るために面談を行います。その上で目標から逆算をし、受講期間内に目標達成をするためのカリキュラムを作成いたします。</p>
 
-          <h4>例えば、、、<br>パソコン初心者から4か月で<br>ウェブアプリ開発を目指す方</h4>
+          <h4 class="example">例えば、、、<br>パソコン初心者から4か月で<br>ウェブアプリ開発を目指す方</h4>
 
           <table>
 
@@ -138,69 +138,103 @@
        <div class="block course">
          <h2 id="fee">コース・料金</h2>
 
-         <h3>「Code Expand」ではフリーランスコースのみを展開しています。</h3>
+         <h3>「<span>Code Expand</span>」ではフリーランスコースのみを展開しています。
+           期間としては、<span>4か月</span>、<span>6か月</span>の二つをご用意しております。 </h3>
 
-         <p>期間としては、4か月、6か月の二つをご用意しております。</p>
 
-         <ul>
+         <div class="box">
+
+           
+           <ul>
            <h3>どちらのプランにも共通のサポート</h3>
            <li>
-             <h4>質問し放題</h4>
-             <p>受講期間中は質問し放題！
+             <h3 class="js-sub first">質問し放題</h3>
+             <p class="js-text">受講期間中は質問し放題！
                <br>9時から22時の間、毎日何回でも質問可能です。</p>
-            </li>
-           <li>
-             <h4>教材見放題</h4>
-             <p>受講期間中はコースに含まれるすべての教材を見放題！
-               <br>自分のペースで進み、忘れたところも何度も復習できます。。</p>
-            </li>
-           <li>
-             <h4>質問し放題</h4>
-             <p>受講期間中は質問し放題！
-               <br>9時から22時の間、毎日何回でも質問可能です。</p>
-            </li>
-           <li>
-             <h4>質問し放題</h4>
-             <p>受講期間中は質問し放題！
-               <br>9時から22時の間、毎日何回でも質問可能です。</p>
-            </li>
-         </ul>
+              </li>
+              <li>
+                <h3 class="js-sub second">教材見放題</h3>
+                <p class="js-text">受講期間中はコースに含まれるすべての教材を見放題！
+                  <br>自分のペースで進み、忘れたところも何度も復習できます。。</p>
+                </li>
 
+                <li>
+                  <h3 class="js-sub third">週２回の面談</h3>
+                  <p class="js-text">学習内容やモチベーションの維持・向上のための時間
+                    <br>また、フリーランスとしての働き方なども聴くことが可能です。</p>
+                  </li>
 
+                  <li>
+                    <h3 class="js-sub forth">受講期間延長保証</h3>
+                    <p class="js-text">
+                      学業や仕事等との量膣が厳しくなったなど事情があった際には無料で1～2か月の延長を保証します。
+                      <br>躓いても最後までやり遂げることができます。</p>
+                    </li>
+                  </ul>
+                  
+                </div>
 
-         <table>
-           
-           <tr>
-             <th>4か月コース</th>
-             <th>6か月コース</th>
-           </tr>
-
-           <tr>
-             <td></td>
-             <td></td>
-           </tr>
-
-           <tr>
-             <td></td>
-           </tr>
-         
-         </table>
 
        </div>
 
        
-       <div class="block">
+       <div class="block old">
          <h2 id="ob">卒業生の声</h2>
 
+
+         <div class="box">
+          <h3>未経験から4か月でフリーランスに！</h3>
+          <div class="ob1"></div>
+
+          <h4>卒業生のコメント</h4>
+          <div class="addition">「現在フリーランスとして活躍中！」</div>
+          <p>私は大学3年の夏から、Code Expandを受講しました。通い始めたきっかけは個人で稼げるスキルを身につけたいと思い、プログラミングスクールの無料カウンセリングを手あたり次第受けていたところ、カリキュラムに魅了を感じ通い始めました。実際受講してみると、メンターの方もとても手厚くサポートしてくださり、また、質問に対する答え方もヒントを与えるような形で回答してくださったので自分でやり抜く力も身に付きました。そして、学習に関することだけでなく、フリーランスとしての働き方等に関しても教えてくださり、とても参考になりました。</p>
+         </div>
+
+        </div>
+
+        <div id="page-top"><i class="fa fa-chevron-up"></i></div>
+
+
+
        </div>
 
        
        
-      </div>
+       
+
+      
+
+
 
     </main>
 
     <footer></footer>
+   
     <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+      // TOPに戻るボタン
+      var topBtn = $('#page-top');
+      topBtn.hide();
+      //スクロールが100に達したらボタン表示
+      $(window).scroll(function () {
+      var w = $(window).width();
+      if ($(this).scrollTop() > 100) {
+      topBtn.fadeIn();
+      } else {
+      topBtn.fadeOut();
+      }
+      });
+      //スムーススクロールでページトップへ
+      topBtn.click(function () {
+      $('body,html').animate({
+      scrollTop: 0
+      }, 500);
+      return false;
+      });
+      });
+      </script>
   </body>
 </html>

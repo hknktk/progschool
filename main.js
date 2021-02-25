@@ -1,3 +1,27 @@
+(function(){
+  var pagetop = $('#page-top');
+  pagetop.hide();
+  $(window).scroll(function () {
+     if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+     } else {
+          pagetop.fadeOut();
+     }
+  });
+  pagetop.click(function () {
+     $('body, html').animate({ scrollTop: 0 }, 500);
+     return false;
+  });
+});
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded',function(){
   const $menuButton = document.getElementById("menuButton");
   const $slide      = document.getElementById("slide");
@@ -50,8 +74,10 @@ document.addEventListener('DOMContentLoaded',function(){
     })
 
 
+    
+    
 
+});
 
-})
 
 

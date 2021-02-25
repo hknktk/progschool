@@ -137,8 +137,8 @@ header .background h2 {
 
 #menuButton {
   position: fixed;
-  bottom: 30px;
   right: 10px;
+  bottom: 80px;
   display: block;
   width: 50px;
   height: 50px;
@@ -147,6 +147,7 @@ header .background h2 {
   -webkit-transition: 0.9s;
   transition: 0.9s;
   z-index: 4;
+  opacity: 0.7;
 }
 
 #menuButton.active {
@@ -267,8 +268,7 @@ header .background h2 {
   position: relative;
   width: 90%;
   min-height: 30vh;
-  margin: 10px auto 50px;
-  padding-top: 50px;
+  margin: 10px auto 100px;
 }
 
 .container .block .box .photo1 {
@@ -304,7 +304,7 @@ header .background h2 {
 }
 
 .container .block .box h3 {
-  margin: 20px auto 0px;
+  margin: 40px auto 0px;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -352,7 +352,7 @@ header .background h2 {
 .container .block .box p {
   width: 95%;
   font-size: 16px;
-  margin: 3px auto;
+  margin: 3px auto 7px;
   padding: 20px;
   font-family: serif;
   line-height: 1.5;
@@ -361,10 +361,10 @@ header .background h2 {
 
 .container .block .box p.js-text {
   opacity: 0;
-  -webkit-transform: translateY(5%);
-          transform: translateY(5%);
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .container .block .box p.js-text.show {
@@ -373,7 +373,7 @@ header .background h2 {
           transform: none;
 }
 
-.container .block .box h4 {
+.container .block .box h4.example {
   font-size: 16px;
   padding: 20px 5px;
   text-align: center;
@@ -388,8 +388,8 @@ header .background h2 {
 
 @-webkit-keyframes example {
   50% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
   }
   100% {
     -webkit-transform: none;
@@ -399,8 +399,8 @@ header .background h2 {
 
 @keyframes example {
   50% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
   }
   100% {
     -webkit-transform: none;
@@ -436,5 +436,56 @@ header .background h2 {
 
 .container .block .box table td span {
   color: #ff1c1c;
+}
+
+.container .course > h3 {
+  font-size: 16px;
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+
+.container .course > h3 span {
+  border-bottom: 1px solid #ff1c1c;
+  color: #32b4ff;
+}
+
+.container .old h4 {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.container .old h4::before, .container .old h4::after {
+  content: "-";
+}
+
+.container .old .addition {
+  text-align: center;
+  opacity: 0.8;
+  color: #ff1c1c;
+  font-size: 14px;
+}
+
+.container .old .ob1 {
+  background: url(./img/ob1.png) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 30vh;
+  margin: 20px auto 0;
+}
+
+.container #page-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #32b4ff;
+  opacity: 0.7;
+  min-width: 50px;
+  min-height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  bottom: 2%;
+  right: 2%;
 }
 /*# sourceMappingURL=style.css.map */
