@@ -15,6 +15,7 @@ li {
 
 html, body {
   overflow-x: hidden;
+  font-family: serif;
 }
 
 header {
@@ -48,8 +49,8 @@ header .background {
 header .background h1 {
   position: absolute;
   left: 5%;
-  top: 10%;
-  font-size: 60px;
+  top: 40%;
+  font-size: 50px;
   color: #32b4ff;
   text-shadow: 2px 2px 0px #fff;
   font-style: italic;
@@ -57,13 +58,46 @@ header .background h1 {
   font-weight: bold;
   padding: 5px 7px 2px 5px;
   border-bottom: 3px solid #ff1c1c;
-  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-animation: main 1.5s;
+          animation: main 1.5s;
+}
+
+@-webkit-keyframes main {
+  0% {
+    opacity: 0;
+    background-color: none;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes main {
+  0% {
+    opacity: 0;
+    background-color: none;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 header .background h2 {
   position: absolute;
-  left: 2%;
-  top: 70%;
+  left: 1%;
+  top: 60%;
   font-size: 25px;
   font-weight: bold;
   color: #fff;
@@ -71,11 +105,39 @@ header .background h2 {
   padding: 10px 15px;
   -webkit-box-shadow: 25px 20px 0px #133568;
           box-shadow: 25px 20px 0px #133568;
+  -webkit-animation: title 3s;
+          animation: title 3s;
+}
+
+@-webkit-keyframes title {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px #fff;
+            box-shadow: 0px 0px 0px #fff;
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes title {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px #fff;
+            box-shadow: 0px 0px 0px #fff;
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 #menuButton {
   position: fixed;
-  top: 30px;
+  bottom: 30px;
   right: 10px;
   display: block;
   width: 50px;
@@ -158,10 +220,9 @@ header .background h2 {
 }
 
 #slide h2 {
-  font-size: 40px;
+  font-size: 35px;
   margin: 100px 10px 0px;
   text-align: center;
-  font-style: italic;
   color: #fff;
   text-shadow: 1px 1px 5px #151788;
   padding: 2px;
@@ -187,63 +248,63 @@ header .background h2 {
   background-color: #fefefe;
 }
 
+.container .block {
+  margin-top: 150px;
+}
+
 .container .block h2 {
   text-align: center;
-  margin: 30px auto;
+  margin: 50px auto 0px;
   font-size: 30px;
+  font-weight: bold;
   color: #32b4ff;
   line-height: 2;
 }
 
 .container .block h2::before {
-  content: "/";
-  color: #ff1c1c;
-  padding: 0 5px;
-}
-
-.container .block h2 span {
-  font-style: italic;
-  font-weight: bold;
-  font-size: 35px;
+  content: "|";
+  color: orange;
+  padding: 0 1px;
 }
 
 .container .block .box {
   position: relative;
   width: 90%;
   min-height: 30vh;
-  margin: 10px auto 100px;
+  margin: 10px auto 50px;
+  padding-top: 50px;
 }
 
 .container .block .box .photo1 {
-  width: 100%;
-  min-height: 30vh;
   background: url(./img/img1.png) center center no-repeat;
   background-size: cover;
+  width: 100%;
+  min-height: 30vh;
   margin: 20px auto 0;
 }
 
 .container .block .box .photo2 {
-  width: 100%;
-  min-height: 30vh;
   background: url(./img/img2.png) center center no-repeat;
   background-size: cover;
-  margin: 10px auto 0;
+  width: 100%;
+  min-height: 30vh;
+  margin: 20px auto 0;
 }
 
 .container .block .box .photo3 {
-  width: 100%;
-  min-height: 30vh;
   background: url(./img/img3.png) center center no-repeat;
   background-size: cover;
-  margin: 10px auto 0;
+  width: 100%;
+  min-height: 30vh;
+  margin: 20px auto 0;
 }
 
 .container .block .box .photo4 {
-  width: 100%;
-  min-height: 30vh;
   background: url(./img/img4.png) center center no-repeat;
   background-size: cover;
-  margin: 10px auto 0;
+  width: 100%;
+  min-height: 30vh;
+  margin: 20px auto 0;
 }
 
 .container .block .box h3 {
@@ -252,6 +313,20 @@ header .background h2 {
   font-size: 20px;
   font-weight: bold;
   color: #32b4ff;
+  letter-spacing: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.container .block .box h3.js-sub.show {
+  opacity: 1;
+  letter-spacing: 1px;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .container .block .box h3.first::before {
@@ -286,5 +361,84 @@ header .background h2 {
   font-family: serif;
   line-height: 1.5;
   text-align: justify;
+}
+
+.container .block .box p.js-text {
+  opacity: 0;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.container .block .box p.js-text.show {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.container .block .box h4 {
+  font-size: 16px;
+  padding: 20px 5px;
+  text-align: center;
+  line-height: 1.5;
+  background-color: #e7f6fa;
+  margin-bottom: 10px;
+  color: #333;
+  border-radius: 5px;
+  -webkit-animation: example 3s ease-in-out infinite;
+          animation: example 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes example {
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes example {
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.container .block .box table {
+  width: 100%;
+}
+
+.container .block .box table tr {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.container .block .box table th, .container .block .box table td {
+  display: block;
+  line-height: 1.5;
+  padding: 10px 5px;
+}
+
+.container .block .box table th {
+  background-color: #ccf0f0;
+  font-weight: bold;
+}
+
+.container .block .box table td {
+  font-size: 14px;
+  font-family: serif;
+  border: 1px solid #9b9cf7;
+}
+
+.container .block .box table td span {
+  color: #ff1c1c;
 }
 /*# sourceMappingURL=style.css.map */
