@@ -67,7 +67,7 @@ header .background h1 {
   top: 40%;
   font-size: 3rem;
   color: #32b4ff;
-  text-shadow: 2px 2px 0px #fff;
+  text-shadow: 3px 3px 0px #fff;
   font-style: italic;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
@@ -123,13 +123,16 @@ header .background h1 {
 
 header .background h2 {
   position: absolute;
-  left: 1%;
+  width: 85%;
+  left: 3%;
   top: 60%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
   font-weight: bold;
   color: #fff;
   background-color: #32b4ff;
   padding: 10px 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   -webkit-box-shadow: 25px 20px 0px #133568;
           box-shadow: 25px 20px 0px #133568;
   -webkit-animation: title 3s;
@@ -669,6 +672,10 @@ header .background h2 {
 
 .container .old h4::before, .container .old h4::after {
   content: "-";
+}
+
+.container .old p {
+  border: dashed 1px #9b9cf7;
 }
 
 .container .old .ob1 {
